@@ -75,8 +75,23 @@ const totalCompletedElement = document.getElementById("totalCompleted");
 totalCompletedElement.textContent =
   totalCompleted < 10 ? "0" + totalCompleted : totalCompleted;
 
+function getCurrentTime() {
+  const now = new Date();
+
+  // Format hours, minutes, and seconds
+  let hours = now.getHours();
+  const minutes = now.getMinutes().toString().padStart(2, "0");
+  const seconds = now.getSeconds().toString().padStart(2, "0");
+
+  // Determine AM or PM
+  const ampm = hours >= 12 ? "PM" : "AM";
+  hours = hours % 12 || 12; // Convert to 12-hour format
+
+  const formattedTime = `${hours}:${minutes}:${seconds} ${ampm}`;
+  return formattedTime;
+}
+
 const handleTaskCompleted = (taskId) => {
-  console.log(taskId);
   totalCompleted += 1;
   totalCompletedElement.textContent =
     totalCompleted < 10 ? "0" + totalCompleted : totalCompleted;
@@ -88,4 +103,22 @@ const handleTaskCompleted = (taskId) => {
   const taskButtonElement = document.getElementById(`task${taskId}`);
   taskButtonElement.disabled = true;
   taskButtonElement.classList.add("opacity-20");
+
+  const activityLogContainer = document.getElementById(
+    "activity_log_container"
+  );
+  //   find the task
+  const task = tasks.find((task) => task.id === taskId);
+  activityLogContainer.innerHTML += `
+            <li class="bg-secondary p-[10px] rounded-lg">
+              You have Complete ${task.title} at ${getCurrentTime()}
+            </li>`;
+};
+
+// clear activity log
+const clearActivityLog = () => {
+  const activityLogContainer = document.getElementById(
+    "activity_log_container"
+  );
+  activityLogContainer.innerHTML = "";
 };

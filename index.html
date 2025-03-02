@@ -292,6 +292,7 @@
             >
           </p>
           <button
+            onclick="clearActivityLog()"
             class="bg-primary shadow-none mx-auto my-4 py-2 rounded-lg w-[150px] font-medium text-white text-base btn btn-primary"
           >
             Clear History
@@ -300,14 +301,7 @@
         <!-- header end -->
         <!-- body start -->
         <div class="px-7 py-6">
-          <ul class="gap-6 grid">
-            <li class="bg-secondary p-[10px] rounded-lg">
-              You have Complete The Task Add Dark Mode at 12:48:15 PM
-            </li>
-            <li class="bg-secondary p-[10px] rounded-lg">
-              You have Complete The Task Add Dark Mode at 12:48:15 PM
-            </li>
-          </ul>
+          <ul class="gap-6 grid" id="activity_log_container"></ul>
         </div>
         <!-- body end -->
       </div>
