@@ -113,6 +113,10 @@ const handleTaskCompleted = (taskId) => {
             <li class="bg-secondary p-[10px] rounded-lg">
               You have Complete ${task.title} at ${getCurrentTime()}
             </li>`;
+  alert("Board Updated Successfully");
+  if (totalAssigned === 0) {
+    alert("Congrats!!! You have completed all the current task");
+  }
 };
 
 // clear activity log
