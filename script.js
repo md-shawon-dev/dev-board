@@ -94,10 +94,14 @@ function getCurrentTime() {
 const handleTaskCompleted = (taskId) => {
   totalCompleted += 1;
   totalCompletedElement.textContent =
-    totalCompleted < 10 ? "0" + totalCompleted : totalCompleted;
+    totalCompleted < 10 && totalCompleted != 0
+      ? "0" + totalCompleted
+      : totalCompleted;
   totalAssigned -= 1;
   totalAssignedElement.textContent =
-    totalAssigned < 10 ? "0" + totalAssigned : totalAssigned;
+    totalAssigned < 10 && totalAssigned != 0
+      ? "0" + totalAssigned
+      : totalAssigned;
 
   // disable the button
   const taskButtonElement = document.getElementById(`task${taskId}`);
