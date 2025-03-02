@@ -51,7 +51,9 @@
         >
           <img src="./assets/checkbox.png" class="my-auto" alt="" />
 
-          <p class="font-bold text-[#1E1E1E] text-3xl">23</p>
+          <p id="totalCompleted" class="font-bold text-[#1E1E1E] text-3xl">
+            23
+          </p>
         </div>
         <div class="bg-secondary p-2 rounded-full cursor-pointer">
           <img src="./assets/theme-btn.png" alt="" />
@@ -78,7 +80,9 @@
             </div>
             <div>
               <p class="font-medium text-[#00303c] text-base">Task Assigned </p>
-              <p class="font-bold text-[#00303c] text-3xl">05</p>
+              <p id="totalAssigned" class="font-bold text-[#00303c] text-3xl">
+                05
+              </p>
             </div>
           </div>
           <!-- Discover Something New Today! -->
@@ -124,7 +128,9 @@
                 <p class="font-medium text-[#00303C]">21 March 2025</p>
               </div>
               <button
-                class="bg-primary shadow-none my-4 py-4 rounded-lg w-[130px] font-medium text-white text-base btn btn-primary"
+                id="task1"
+                onclick="handleTaskCompleted(1)"
+                class="bg-primary disabled:opacity-20 shadow-none my-4 py-4 rounded-lg w-[130px] font-medium text-white text-base btn btn-primary"
               >
                 Completed
               </button>
@@ -150,6 +156,8 @@
                 <p class="font-medium text-[#00303C]">21 March 2025</p>
               </div>
               <button
+                id="task2"
+                onclick="handleTaskCompleted(2)"
                 class="bg-primary shadow-none my-4 py-4 rounded-lg w-[130px] font-medium text-white text-base btn btn-primary"
               >
                 Completed
@@ -176,6 +184,8 @@
                 <p class="font-medium text-[#00303C]">21 March 2025</p>
               </div>
               <button
+                id="task3"
+                onclick="handleTaskCompleted(3)"
                 class="bg-primary shadow-none my-4 py-4 rounded-lg w-[130px] font-medium text-white text-base btn btn-primary"
               >
                 Completed
@@ -202,6 +212,8 @@
                 <p class="font-medium text-[#00303C]">21 March 2025</p>
               </div>
               <button
+                id="task4"
+                onclick="handleTaskCompleted(4)"
                 class="bg-primary shadow-none my-4 py-4 rounded-lg w-[130px] font-medium text-white text-base btn btn-primary"
               >
                 Completed
@@ -228,6 +240,8 @@
                 <p class="font-medium text-[#00303C]">21 March 2025</p>
               </div>
               <button
+                id="task5"
+                onclick="handleTaskCompleted(5)"
                 class="bg-primary shadow-none my-4 py-4 rounded-lg w-[130px] font-medium text-white text-base btn btn-primary"
               >
                 Completed
@@ -254,6 +268,8 @@
                 <p class="font-medium text-[#00303C]">21 March 2025</p>
               </div>
               <button
+                id="task6"
+                onclick="handleTaskCompleted(6)"
                 class="bg-primary shadow-none my-4 py-4 rounded-lg w-[130px] font-medium text-white text-base btn btn-primary"
               >
                 Completed
