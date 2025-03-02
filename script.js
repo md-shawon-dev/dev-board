@@ -122,3 +122,9 @@ const clearActivityLog = () => {
   );
   activityLogContainer.innerHTML = "";
 };
+
+// set random background body color
+const randomColor = () => {
+  const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+  document.body.style.backgroundColor = "#" + randomColor;
+};
