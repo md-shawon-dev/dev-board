@@ -42,7 +42,7 @@ const tasks = [
   {
     id: 6,
     company: "Glassdoor",
-    title: "Improve Job Searching Experience",
+    title: "Improve Job Searching",
     description:
       "Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly.",
     deadline: "21 March 2025",
